@@ -1,24 +1,7 @@
-# README
+# StudyShare
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+これは中高生が受験勉強を進めていくにあたって質問及びそれに対する解答を共有するためのプラットフォームになっています。
 
-Things you may want to cover:
+##使い方
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+このアプリケーションはユーザビリティを考慮した設計となっており教科ごとのページを設けています。対応教科は英語、数学、物理、化学、生物となっています。
