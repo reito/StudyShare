@@ -1,0 +1,10 @@
+<h1>StudyShare</h1>
+
+<p>こんにちは <%= "#{@user.name}さん" %>,</p>
+
+<p>
+下のリンクをクリックしてアカウントを有効化しましょう!:
+</p>
+
+<%= link_to "有効化する", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
