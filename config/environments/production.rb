@@ -86,7 +86,7 @@ Rails.application.configure do
     :port           => '587',
     :authentication => :plain,
     :user_name      => Rails.application.credentials.gmail[:user_name],
-    :password       => ERails.application.credentials.gmail[:password],
+    :password       => Rails.application.credentials.gmail[:password],
     :domain         => 'gmail.com',
     authentication: :login
   }
