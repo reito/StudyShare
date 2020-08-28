@@ -12,12 +12,13 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert_select 'div.pagination'
     # 無効な送信
     assert_no_difference 'Micropost.count' do
-      post microposts_path, params: { micropost: { content: "" } }
+      post microposts_path, params: { micropost: { content: "", subject: "" } }
     end
     # 有効な送信
     content = "小学校は算数、中学校からは数学。"
     assert_difference 'Micropost.count', 1 do
-      post microposts_path, params: { micropost: { content: content } }
+      post microposts_path, params: { micropost: { content: content,
+                                                   subject: "2" } }
     end
     assert_redirected_to root_url
     follow_redirect!
@@ -42,7 +43,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     log_in_as(@other_user)
     get root_path
     assert_match "0 microposts", response.body
-    @other_user.microposts.create!(content: "初めてのマイクロポスト")
+    @other_user.microposts.create!(content: "f(x)=3x^2-4", subject: "2")
     get root_path
     assert_match "1", response.body
   end

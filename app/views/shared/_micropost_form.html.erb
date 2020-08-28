@@ -1,5 +1,11 @@
 <%= form_for(@micropost) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
+    <div class="labels">
+    <label><%= f.radio_button :subject, "1" %>英語</label>
+    <label><%= f.radio_button :subject, "2" %>数学</label>
+    <label><%= f.radio_button :subject, "3" %>物理</label>
+    <label><%= f.radio_button :subject, "4" %>化学</label>
+    </div>
     <div class="field">
       <%= f.text_area :content, placeholder: "新しく投稿する..." %>
     </div>

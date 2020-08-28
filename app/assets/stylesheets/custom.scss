@@ -288,3 +288,10 @@ input, textarea, select, .uneditable-input {
       border: 0;
     }
   }
+
+  .labels {
+    margin-left: 10px;
+    label {
+      margin-left: 4rem;
+    }
+  }
