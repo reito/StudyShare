@@ -1,7 +1,8 @@
+<h1>数学</h1>
 <% if @microposts.any? %>
-      <h3>投稿数 (<%= @microposts.count %>)</h3>
-      <ol class="microposts">
+    <h3>投稿数 (<%= @microposts.count %>)</h3>
+    <ol class="microposts">
         <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
-    <% end %>
+    </ol>
+    <%= will_paginate @microposts %>
+<% end %>
