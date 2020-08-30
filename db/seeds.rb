@@ -19,16 +19,15 @@ User.create!(name:  "Example User",
                activated_at: Time.zone.now)
 end
 
-# # マイクロポスト
-# users = User.order(:created_at).take(6)
-# 50.times do
-#     content = Faker::Lorem.sentence(5)
-#     users.each { |user| user.microposts.create!(content: content,
-#                                                 subject: "1") }
-# end
+# マイクロポスト
+users = User.order(:created_at).take(6)
+50.times do
+    content = Faker::Lorem.sentence(5)
+    users.each { |user| user.microposts.create!(content: content, subject: "1") }
+end
 
-content = Faker::Lorem.sentence(5)
-User.first.microposts.create!(content: content, subject: "4")
+# content = Faker::Lorem.sentence(5)
+# User.first.microposts.create!(content: content, subject: "4")
 
 # リレーションシップ
 users = User.all
