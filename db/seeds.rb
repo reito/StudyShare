@@ -23,11 +23,9 @@ end
 users = User.order(:created_at).take(6)
 50.times do
     content = Faker::Lorem.sentence(5)
-    users.each { |user| user.microposts.create!(content: content, subject: "1") }
+    subject = rand(1..4)
+    users.each { |user| user.microposts.create!(content: content, subject: "<%= subject %>") }
 end
-
-# content = Faker::Lorem.sentence(5)
-# User.first.microposts.create!(content: content, subject: "4")
 
 # リレーションシップ
 users = User.all
