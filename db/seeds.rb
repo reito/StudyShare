@@ -27,6 +27,9 @@ end
 #                                                 subject: "1") }
 # end
 
+content = Faker::Lorem.sentence(5)
+User.first.microposts.create!(content: content, subject: "4")
+
 # リレーションシップ
 users = User.all
 user = User.first
