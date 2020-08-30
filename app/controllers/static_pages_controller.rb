@@ -12,4 +12,20 @@ class StaticPagesController < ApplicationController
   def about
   end
 
+  def english
+    @microposts = Micropost.where(subject: "1").paginate(page: params[:page])
+  end
+
+  def math
+    @microposts = Micropost.where(subject: "2").paginate(page: params[:page])
+  end
+
+  def physics
+    @microposts = Micropost.where(subject: "3").paginate(page: params[:page])
+  end
+
+  def chemistry
+    @microposts = Micropost.where(subject: "4").paginate(page: params[:page])
+  end
+
 end

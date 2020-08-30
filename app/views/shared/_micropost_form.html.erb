@@ -1,6 +1,7 @@
 <%= form_for(@micropost) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
     <div class="labels">
+    <p>質問したい教科を選択してください</p>
     <label><%= f.radio_button :subject, "1" %>英語</label>
     <label><%= f.radio_button :subject, "2" %>数学</label>
     <label><%= f.radio_button :subject, "3" %>物理</label>

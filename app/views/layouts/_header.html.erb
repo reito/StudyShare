@@ -6,10 +6,20 @@
         <li><%= link_to "ホーム", root_path %></li>
         <li><%= link_to "ヘルプ", help_path %></li>
         <% if logged_in? %>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            教科 <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "英語", {controller: :static_pages, action: :english} %></li>
+            <li><%= link_to "数学", {controller: :static_pages, action: :math} %></li>
+            <li><%= link_to "物理", {controller: :static_pages, action: :physics} %></li>
+            <li><%= link_to "化学", {controller: :static_pages, action: :chemistry} %></li>
+          </ul>
           <li><%= link_to "ユーザー一覧", users_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
+              アカウント <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to "プロフィール", current_user %></li>
