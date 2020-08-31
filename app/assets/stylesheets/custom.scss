@@ -59,6 +59,9 @@ p {
   line-height: 1.7em;
 }
 
+li {
+  list-style: none;
+}
 
 /* header */
 
@@ -66,14 +69,26 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: #FFFF99;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: #FFFF00;
     text-decoration: none;
+  }
+}
+
+.navbar {
+  background-color: #00FFCC;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #FFFF99;
+  font-weight: 800;
+  &:hover {
+    color: #FFFF00;
   }
 }
 
@@ -297,4 +312,8 @@ input, textarea, select, .uneditable-input {
     label {
       margin-left: 4rem;
     }
+  }
+
+  .to-answer {
+    margin-left: 10rem;
   }
