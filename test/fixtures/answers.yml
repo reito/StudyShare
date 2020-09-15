@@ -1,0 +1,9 @@
+math:
+  content: "小学校までが算数で中学校からが数学だよ"
+  created_at: <%= 10.minutes.ago %>
+  user: michael
+
+english:
+  content: "i am a student"
+  created_at: <%= Time.zone.now %>
+  user: archer

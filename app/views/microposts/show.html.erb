@@ -1,4 +1,4 @@
-<ul id="micropost-<%= @micropost.id %>">
+<ul id="micropost-<%= @micropost.id %>" class="question">
   <%= link_to gravatar_for(@micropost.user, size: 50), @micropost.user %>
   <li class="user"><%= link_to @micropost.user.name, @micropost.user %></li>
   <li class="content">
@@ -13,3 +13,26 @@
     <% end %>
   </li>
 </ul>
+<button class="create-answer">
+  <%= link_to "回答を作成する", controller: "answers", action: "new", micropost_id: @micropost.id %>
+</button>
+<% if @answers.any? %>
+<div class="answers">
+   <% @answers.each do |answer| %>
+    <ul id="answer-<%= answer.id %>"  class="answer">
+      <%= link_to gravatar_for(answer.user, size: 50), answer.user %>
+      <li class="user"><%= link_to answer.user.name, answer.user %></li>
+      <li class="content">
+      <%= answer.content %>
+      </li>
+      <li class="timestamp">
+        Posted <%= time_ago_in_words(answer.created_at) %> ago.
+        <% if current_user?(answer.user) %>
+          <%= link_to "削除する", answer, method: :delete,
+                                            date: { confirm: "本当によろしいですか?"} %>
+        <% end %>
+      </li>
+    </ul>
+  <% end %>
+</div>
+<% end %>

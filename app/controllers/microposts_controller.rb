@@ -4,6 +4,9 @@ class MicropostsController < ApplicationController
 
     def show
         @micropost = Micropost.find(params[:id])
+        @answers = Answer.where(micropost_id: @micropost.id)
+        # @answer = @micropost.answers.build if logged_in?
+        # @answers = @micropost.answers.paginate(page: params[:page])
     end
 
     def create
