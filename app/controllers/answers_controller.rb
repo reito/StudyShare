@@ -25,7 +25,7 @@ class AnswersController < ApplicationController
             flash[:success] = "回答が作成されました"
             redirect_to micropost_path(@answer.micropost)
         else
-            render 'microposts/show'
+            render 'answers/new'
         end
     end
 
