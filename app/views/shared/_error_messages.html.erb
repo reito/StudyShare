@@ -1,7 +1,7 @@
 <% if object.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
-      エラーが<%= pluralize(object.errors.count, "error") %>箇所あります.
+      エラーが<%= object.errors.count %>箇所あります.
     </div>
     <ul>
     <% object.errors.full_messages.each do |msg| %>

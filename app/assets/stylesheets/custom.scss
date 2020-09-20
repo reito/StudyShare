@@ -32,6 +32,15 @@ textarea {
   }
 }
 
+.btn {
+  background-color: #00FFCC;
+  color: #FFFF99;
+  &:hover {
+    background-color: #00FFCC;
+    color: #FFFF00;
+  }
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
