@@ -31,6 +31,11 @@
           <%= link_to "削除する", answer, method: :delete,
                                             date: { confirm: "本当によろしいですか?"} %>
         <% end %>
+        <% if answer.user != current_user%>
+          <% unless Like.find_by(like_id: current_user, liked_id: answer.user, answer_id: answer.id) %>
+          <%= link_to "お礼にポイントを付与する", {controller: "likes", action: "create", id: answer.user.id, micropost: @micropost, answer: answer.id}, method: "post" %>
+          <% end %>
+        <% end %>
       </li>
     </ul>
   <% end %>

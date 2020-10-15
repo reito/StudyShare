@@ -9,6 +9,11 @@ class StaticPagesController < ApplicationController
   end
 
   def help
+    @tops = User.order(point: :desc).max(User.count/20)
+    # @sames = User.where(point: (current_user.point - 20)..(current_user.point + 20))
+    point_users = User.order(point: :desc)
+    point_ranking = User.where('point >= ?', current_user.point).count
+    @sames = point_users[(point_ranking - User.count/20)..(point_ranking + User.count/20)].sample(5)
   end
 
   def about

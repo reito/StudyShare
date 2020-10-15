@@ -7,11 +7,14 @@ class AnswersControllerTest < ActionDispatch::IntegrationTest
     @micropost = microposts(:ants)
   end
 
-  test "answer created correctly" do
-    log_in_as(@user)
-    get micropost_path(@micropost)
-    assert_select 'a[href=?]', new_answer_path
+  # test "answer created correctly" do
+  #   log_in_as(@user)
+  #   get micropost_path(@micropost)
+  #   get new_answer_path
+  #   assert_difference 'Answer.count', 1 do
+
+  #   end
     
-  end
+  # end
 
 end

@@ -1,6 +1,12 @@
-<% provide(:title, "Help") %>
+<% provide(:title, "おすすめのユーザー") %>
 
-<h1>Help</h1>
-    <p>
-    </p>
+<h1>ポイント上位者</h1>
+<ul class="users">
+  <%= render @tops %>
+</ul>
+<h1>自分とポイントが近いユーザー</h1>
+<ul class="users">
+  <%= render @sames %>
+</ul>
+
  
