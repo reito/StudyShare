@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.2.4'
+gem 'rake', '~> 13.0'
 
 gem 'bcrypt',                   '~> 3.1.13'  # 3.1.12 にはセキュリティ上の問題があるので、バージョンアップ
 gem 'faker',                    '~> 2.19'    # 1.7.3 は古いので最新に更新
@@ -40,7 +41,7 @@ end
 
 group :production do
   gem 'pg',  '~> 1.2'   # PostgreSQL の最新安定バージョン
-  gem 'fog', '~> 2.1'   # 最新バージョンに更新
+  # gem 'fog', '~> 3.0'   # 最新バージョンに更新
 end
 
 
