@@ -100,7 +100,7 @@ Rails.application.configure do
   #   enable_starttls_auto: true
   # }
 
-  config.action_mailer.default_url_options = { host: 'your-app-name.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://studyshare-app-43a7e3768237.herokuapp.com' }
 ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.gmail.com',
   :port           => 587,
