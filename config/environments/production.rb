@@ -88,17 +88,29 @@ Rails.application.configure do
   #   :domain         => 'heroku.com',
   #   :enable_starttls_auto => true
   # }
-  config.action_mailer.default_url_options = { host: host }
-  ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.gmail.com',
-    :port           => '587',
-    # :authentication => :plain,
-    :user_name      => 'zhenlinshannei@gmail.com',
-    :password       => 'vkenkixzooxqzbey',
-    :domain         => 'gmail.com',
-    authentication: :login,
-    enable_starttls_auto: true
-  }
+  # config.action_mailer.default_url_options = { host: host }
+  # ActionMailer::Base.smtp_settings = {
+  #   :address        => 'smtp.gmail.com',
+  #   :port           => '587',
+  #   # :authentication => :plain,
+  #   :user_name      => 'zhenlinshannei@gmail.com',
+  #   :password       => 'vkenkixzooxqzbey',
+  #   :domain         => 'gmail.com',
+  #   authentication: :login,
+  #   enable_starttls_auto: true
+  # }
+
+  config.action_mailer.default_url_options = { host: 'your-app-name.herokuapp.com' }
+ActionMailer::Base.smtp_settings = {
+  :address        => 'smtp.gmail.com',
+  :port           => 587,
+  :domain         => 'gmail.com',
+  :user_name      => ENV['SMTP_USERNAME'],  # 環境変数から読み込む
+  :password       => ENV['SMTP_PASSWORD'],  # 環境変数から読み込む
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
+
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
