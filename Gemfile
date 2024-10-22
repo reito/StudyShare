@@ -19,16 +19,17 @@ gem 'turbolinks',               '~> 5.2'     # 最新バージョンに更新
 gem 'jbuilder',                 '~> 2.11'    # 最新バージョンに更新
 gem 'mimemagic',                '~> 0.4.2'   # ライセンス問題のため、最新バージョンに更新（0.3.10 は古い）
 
-# group :development, :test do
-#   gem 'sqlite3', '~> 1.4'  # Rails 5.2 では 1.4.x の方が互換性が良い
-#   gem 'byebug',  '~> 11.1', platform: :mri  # 最新バージョンに更新
-# end
+group :development, :test do
+  gem 'sqlite3', '~> 1.4'  # Rails 5.2 では 1.4.x の方が互換性が良い
+  gem 'byebug',  '~> 11.1', platform: :mri  # 最新バージョンに更新
+end
 
 group :development do
   gem 'web-console',           '~> 3.7'   # 最新バージョンに更新
   gem 'listen',                '~> 3.2'   # 最新バージョンに更新
   gem 'spring',                '~> 2.1'   # 最新バージョンに更新
   gem 'spring-watcher-listen', '~> 2.0.1' # このままでOK
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :test do
@@ -41,7 +42,6 @@ end
 
 group :production do
   gem 'pg',  '~> 1.2'   # PostgreSQL の最新安定バージョン
-  # gem 'fog', '~> 3.0'   # 最新バージョンに更新
 end
 
 
