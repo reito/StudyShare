@@ -105,8 +105,8 @@ ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.gmail.com',
   :port           => 587,
   :domain         => 'gmail.com',
-  :user_name      => ENV['SMTP_USERNAME'],  # 環境変数から読み込む
-  :password       => ENV['SMTP_PASSWORD'],  # 環境変数から読み込む
+  :user_name      => 'zhenlinshannei@gmail.com',  # 環境変数から読み込む
+  :password       => 'wwng bfyv aark qvlf',  # 環境変数から読み込む
   :authentication => :plain,
   :enable_starttls_auto => true
 }
