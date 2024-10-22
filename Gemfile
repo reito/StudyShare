@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.2.4'
 gem 'rake', '~> 13.0'
 
-gem 'bcrypt',                   '~> 3.1.13'  # 3.1.12 にはセキュリティ上の問題があるので、バージョンアップ
+gem 'bcrypt' # 3.1.12 にはセキュリティ上の問題があるので、バージョンアップ
 gem 'faker',                    '~> 2.19'    # 1.7.3 は古いので最新に更新
 gem 'carrierwave',              '~> 1.3'     # 最新の安定バージョンに更新
 gem 'mini_magick',              '~> 4.9'     # 最新バージョンを使用
@@ -41,7 +41,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg',  '~> 1.2'   # PostgreSQL の最新安定バージョン
+  gem 'pg'   # PostgreSQL の最新安定バージョン
 end
 
 
